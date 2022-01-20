@@ -84,12 +84,50 @@ VALUES(1,1,'Wardha','Wardha',1,'2021-04-22 00:00:00',1);
 SELECT * FROM company;
 
 INSERT INTO tech_type(id,type_name,cur_status,creator_stamp,creator_user)
-(1,'BootCamp','P','2022-01-01',22);
+VALUES(1,'BootCamp','P','2022-01-01',22);
 (2,'BootCamp','A','2022-01-01',23);
 (3,'RFP','P','2022-01-01',25);
 (4,'CFP','P','2022-01-01',26);
 (5,'CFP','A','2022-01-01',26);
 SELECT * FROM tech_type;
+
+INSERT INTO tech_stack(id,tech_name,image_path,framework,cur_status,creator_stamp,creator_user )
+ VALUES(1, 'DOT.NET', 'image1', 'Entity', 'T', null, 1);
+ (2, 'DOT.NET', 'image2', 'Aspnet core', 'S', null, 2);
+ (3, 'DOT.NET', 'image3', 'Entity', 'T', null, 3);
+ (4, 'DOT.NET', 'image2', 'Aspnet core', 'S', null, 4);
+ (5, 'DOT.NET', 'image5', 'Entity', 'T', null, 5);
+ SELECT * FROM tech_stack;
+ 
+ INSERT INTO maker_program(id,program_name,program_type,program_link,tech_stack_id,tech_type_id,is_program_approved,description,status,creator_stamp,creator_user)
+ VALUES(1,55,'Paid','Audience',1,1,1,'approved',1,'2022-02-05',22);
+ (2,55,'Paid','Audience',2,2,1,'approved',1,'2022-02-05',23);
+ (3,55,'Paid','Audience',3,3,1,'approved',1,'2022-02-05',24);
+ (4,551,'Paid','Audience',4,4,1,'approved',1,'2022-02-05',25);
+ (5,550,'Paid','Audience',3,3,1,'approved',1,'2022-02-05',27);
+ SELECT * FROM maker_program ;
+ 
+ INSERT INTO lab(id,name,location,address,status,creator_stamp,creator_user)
+ VALUES(1, 'SQL', 'Mumbai', 'ANdheri', 1, null, 1);
+ (2, 'Srujan', 'Mumbai', 'ANdheri', 2, null, 1);
+ (3, 'Frondend', 'Mumbai', 'ANdheri,West', 3, null, 1);
+ (4, 'Frondend', 'Mumbai', 'ANdheri,West', 3, null, 1);
+ (5, 'Frondend', 'Mumbai', 'ANdheri,West', 3, null, 1);
+ SELECT * FROM lab ;
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
 
 
 
