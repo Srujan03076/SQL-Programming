@@ -1,21 +1,33 @@
-DELIMITER //
-CREATE FUNCTION full_name(first_nm VARCHAR(20),last_nm VARCHAR(30))
+CREATE FUNCTION full_name(first_nm VARCHAR(20))
 RETURNS VARCHAR(55) DETERMINISTIC
 BEGIN
-RETURN CONCAT(first_nm,'',last_nm);
-SELECT id,full_name(first_name, last_name) AS FullName FROM fellowship_candidates;
+DECLARE fullname VARCHAR(100);
+SELECT CONCAT(first_name ,' ',last_name) INTO fullname FROM fellowship_candidates WHERE first_name=first_nm; 
+RETURN fullname;
 END//
 DELIMITER ;
+select full_name('Subodh');
 
 DELIMITER //
-CREATE FUNCTION currentAge(DOB date)
-RETURNS INT
-DETERMINISTIC
+CREATE FUNCTION fn_calculate_age(person_id int)
+RETURNS INT DETERMINISTIC
 BEGIN
-	DECLARE age int;
-	SELECT YEAR(CURDATE()) - YEAR(DOB) INTO age;
-	RETURN age;
+    DECLARE TodayDate DATE;
+	DECLARE student_birth_date DATE;
+    SELECT CURRENT_DATE() INTO TodayDate ;
+	SELECT birth_date from fellowship_candidates where id = person_id into student_birth_date;
+    RETURN YEAR(TodayDate) - YEAR(student_birth_date);
 END//
 DELIMITER ;
-SELECT currentAge('1997/07/03') as PersonAge; 
 
+DELIMITER $$
+CREATE FUNCTION getfullName(person_id INT)
+RETURNS VARCHAR(256)
+DETERMINISTIC
+BEGIN
+	DECLARE fullName varchar(250);
+	SELECT CONCAT(first_name,(middle_name), last_name) INTO fullName FROM fellowship_candidates WHERE id =person_id;
+	RETURN fullName;
+END$$
+DELIMITER ;
+SELECT getfullName(5);
