@@ -115,6 +115,41 @@ INSERT INTO tech_stack(id,tech_name,image_path,framework,cur_status,creator_stam
  (5, 'Frondend', 'Mumbai', 'ANdheri,West', 3, null, 1);
  SELECT * FROM lab ;
  
+ INSERT INTO app_parameters(id,key_type,key_value,key_text,cur_status,lastupd_user,lastupd_stamp,creator_stamp,creator_user,seq_num)
+ VALUES(1, 'Type1', 'fine', 'Execellent', 'Y', 1, null, null, 1, 1);
+ (2, 'Type2', 'fine', 'Execellent', 'Y', 2, null, null, 2, 2);
+ (3, 'Type3', 'fine', 'Execellent', 'Y', 3, null, null, 3, 3);
+ (4, 'Type4', 'fine', 'Execellent', 'Y', 4, null, null, 4, 4);
+ (5, 'Type5', 'fine', 'Execellent', 'Y', 5, null, null, 5,5);
+ SELECT * FROM app_parameters ;
+ 
+ INSERT INTO mentor(id,name,mentor_type,lab_id,status,creator_stamp,creator_user)
+ VALUES(1, 'Srujan Singh', 'Mentor', 1, 1, null, 1)
+ (2, 'Gurkeerat Singh', 'Mentor', 1, 1, null, 1);
+ (3, 'Khuswant Singh', 'Mentor', 1, 1, null, 1);
+ (4, 'Balwant Singh', 'Mentor', 1, 1, null, 1);
+ (5, 'Subodh Singh', 'Mentor', 1, 1, null, 1);
+ SELECT * FROM mentor;
+ 
+ INSERT INTO mentor_ideation_map(id,mentor_id,status,creator_stamp,creator_user)
+ VALUES(1, 1, 1, null, 1);
+ (2, 2, 1, null, 1);
+ (3, 3, 1, null, 1);
+ (4, 4, 1, null, 1);
+ (5, 5, 1, null, 1);
+ SELECT * FROM mentor_ideation_map;
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
