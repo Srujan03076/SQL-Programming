@@ -22,13 +22,13 @@ SELECT * FROM user_roles ;
 
 
 DELIMITER //
-CREATE TRIGGER before_update_password
+CREATE TRIGGER tr_before_update_password
 BEFORE UPDATE ON user_details FOR EACH ROW
 BEGIN
-	DECLARE error_msg1 VARCHAR(600);
-	DECLARE error_msg2 VARCHAR(600);
-	SET error_msg1=('Password cannot be empty');
-	SET error_msg2=('New Password Should Be Defferent From Old Password.');
+	Declare error_message1 varchar(200);
+	Declare error_message2 varchar(600);
+	SET error_message1=('Password should not be empty');
+	SET error_message2=('New Password Should Be Defferent From Old Password.');
 	IF
 		new.password = '' THEN signal sqlstate '45000' set message_text=error_msg1;
 	ELSEIF
@@ -38,6 +38,6 @@ END//
 DELIMITER ;    
 
 
-UPDATE user_details set password = '' where id = 3; # You need to mention password
+UPDATE user_details set password = '' where id = 4; # You need to mention password
 SELECT * FROM  user_details;
     
