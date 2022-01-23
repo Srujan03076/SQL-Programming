@@ -41,12 +41,12 @@ DELIMITER ;
 UPDATE user_details set password = '' where id = 4; # You need to mention password
 SELECT * FROM  user_details;
 
-DELIMITER $$
+DELIMITER //
 	CREATE TRIGGER deleted_company
 	AFTER DELETE ON company FOR EACH ROW
 	BEGIN
 		INSERT INTO company_trash(company_name, date_deleted) VALUES(old.name, localtime());
-	END$$
+	END//
 DELIMITER ;
 INSERT INTO company VALUES (5,'TATA' ,'Rudra Complex, Near Railway Station','Gurgaon', 1, NULL, 1);
 DELETE FROM company where id=5;
