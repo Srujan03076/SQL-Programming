@@ -41,7 +41,20 @@ mysql> SELECT * FROM fellowship_candidates
 -------+-------------------+-------------------+-------------------+------------+----------------+------------+--------------+------------------+----------------------+------------------+-------------------------+------------+--------+---------------+--------------+
 2 rows in set (0.00 sec)
 
+mysql> SElect * from fellowship_candidates;
+
+
+mysql> SELECT first_name,last_name, parent_annual_sal FROM fellowship_candidates
+    ->  WHERE parent_annual_sal = (SELECT MAX(parent_annual_sal) FROM fellowship_candidates);
++------------+-----------+-------------------+
+| first_name | last_name | parent_annual_sal |
++------------+-----------+-------------------+
+| Subodh     | Mahajan   |            420000 |
++------------+-----------+-------------------+
+1 row in set (0.01 sec)
+
 mysql>
+
 
 
 
