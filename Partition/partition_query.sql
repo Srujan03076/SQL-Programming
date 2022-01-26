@@ -1,4 +1,4 @@
-/*RangePartition-*/
+/*RANGE Partitioning-*/
 
 create table candidate_biodata(
 id int NOT NULL,
@@ -49,7 +49,8 @@ WHERE TABLE_SCHEMA = 'lmsdb' AND TABLE_NAME = 'candidate_biodata';
 EXPLAIN SELECT * FROM candidate_biodata WHERE hired_date = '2015-05-05 14:20:56';
 
 
-/*ListPartition-*/
+/*LIST Partitioning-*/
+
 CREATE TABLE Stores (
 cust_name VARCHAR(40),
 bill_no VARCHAR(20) NOT NULL,
@@ -84,6 +85,7 @@ FROM INFORMATION_SCHEMA.PARTITIONS
 WHERE TABLE_SCHEMA = 'lmsdb' AND TABLE_NAME = 'Stores'; 
 EXPLAIN SELECT * FROM Stores WHERE store_id = 102;
 
+/*COLUMN Partitioning*/
 
 CREATE TABLE test_part (A INT, B CHAR(5), C INT, D INT)  
 PARTITION BY RANGE COLUMNS(A, B, C)   
