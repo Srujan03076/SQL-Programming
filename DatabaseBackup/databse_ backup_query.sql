@@ -17,7 +17,7 @@ C:\Program Files\MySQL\MySQL Server 8.0\bin>mysqldump -u root -p lmsdb > "C:\Use
 Enter password: **********
 
 /* 
-droping  the database from mysql  
+Droping  the database from mysql  
 */
 
 C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql -u root -p
@@ -73,7 +73,7 @@ Oracle is a registered trademark of Oracle Corporation and/or its
 affiliates. Other names may be trademarks of their respective
 owners.
 
-mysql> use lms;
+mysql> use lmsdb;
 Database changed
 mysql> show tables;
 
