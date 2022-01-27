@@ -91,7 +91,7 @@ mysql> show tables;
 | candidates_personal_det_check  |
 | company                        |
 | company_requirement            |
-|  company_trash                 |
+| company_trash                 |
 | fellowship_candidates          |
 | hired_candidate                |
 | lab                            |
