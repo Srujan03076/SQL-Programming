@@ -109,3 +109,4 @@ mysql> show tables;
 | user_details                   |
 | user_roles                     |
 +--------------------------------+
+;
