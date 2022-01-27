@@ -10,7 +10,7 @@ select * from candidate;
 | Gayatri    | Pandey    | gayatrih@gmail.com  |
 | Gaju       | Singh     | gaju@gmail.com      |
 | Subodh     | Mahajan   | subodh@gmail.com    |
-| Subash     | Mahajan   | subodh@gmail.com    |
+| Subash     | Mahajan   | subash@gmail.com    |
 +------------+-----------+---------------------+
 6 rows in set (0.01 sec)
 
