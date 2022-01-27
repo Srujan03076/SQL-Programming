@@ -74,7 +74,7 @@ affiliates. Other names may be trademarks of their respective
 owners.
 
 mysql> use lmsdb;
-Database changed
+database changed
 mysql> show tables;
 
 +--------------------------------+
